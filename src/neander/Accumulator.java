@@ -16,7 +16,7 @@ public class Accumulator {
 		else return false;
 	}
 	
-	public int binaryToDecimal() {
+	int binaryToDecimal() {
 		int result = 0;
 		for(int i=(AC.length -1) ; i >= 0; i--){
 			if(AC[i] == 1) {
@@ -28,7 +28,7 @@ public class Accumulator {
 		return result;
 	}
 	
-	int getAC() {
+	public int getAC() {
 		return binaryToDecimal();
 	}
 	

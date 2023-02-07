@@ -1,7 +1,7 @@
 package neander;
 
 public class NZ {
-	protected int []NZ = {0,0};
+	public int []NZ = {0,0};
 	
 	public NZ() {
 		// TODO Auto-generated constructor stub

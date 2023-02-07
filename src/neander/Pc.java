@@ -25,11 +25,11 @@ public class Pc {
 				//System.out.println(result);
 			}
         }
-		//System.out.println(result);
+		System.out.println(result);
 		return result;
 	}
 	
-	int getPc() {
+	public int getPc() {
 		return binaryToDecimal();
 	}
 	void decimalToBinary(int dec) {
@@ -49,6 +49,12 @@ public class Pc {
 	}
 	
 	public static void main(String[] args) {
+		Pc pc = new Pc();
+		pc.printPc();
+		pc.incrementa_pc();
+		
+		pc.binaryToDecimal();
+		pc.printPc();
 
 	}
 

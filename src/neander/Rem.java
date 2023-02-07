@@ -30,7 +30,7 @@ public class Rem {
 		return result;
 	}
 	
-	int getREM() {
+	public int getREM() {
 		return binaryToDecimal();
 	}
 	public static void main(String[] args) {

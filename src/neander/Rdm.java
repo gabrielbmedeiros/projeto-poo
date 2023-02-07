@@ -23,7 +23,7 @@ public class Rdm {
 		return result;
 	}
 	
-	int getRDM() {
+	public int getRDM() {
 		return binaryToDecimal();
 	}
 	void printRDM() {

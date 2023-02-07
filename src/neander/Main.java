@@ -45,9 +45,10 @@ public class Main {
 		Rdm rdm = new Rdm();
 		NZ regNZ = new NZ();
 		Ri ri = new Ri();
+                JanelaGrafica janela = new JanelaGrafica();
 		
 		unitControl.state = 0; //define estado inicial
-		while(pc.getPc() < 10) { //executa até rodar rodas as intr				
+		while(pc.getPc() < Memoria.memo.length) {				
 			control(unitControl.set_state(Decod.decod(ri.getOpcode()),regNZ.NZ));
 			mux.sel = sel;
 			ula.selULA = unitControl.getSelULA();
@@ -64,15 +65,16 @@ public class Main {
 				if(ac.getAC() == 0) regNZ.NZ[1] = 1;
 				if(ac.eh_negativo())regNZ.NZ[0] = 1;
 			}
-			
-			//pc.printPc();			
-			//rem.printREM();
-			//rdm.printRDM();
-			//ri.printRI();
+                        
+			pc.printPc();			
+			rem.printREM();
+			rdm.printRDM();
+			ri.printRI();
 			ac.printAc();
-			System.out.println(ac.binaryToDecimal());
+                        janela.atualizaValores(Integer.toString(pc.getPc()), Integer.toString(rem.getREM()), 
+                                Integer.toString(rdm.getRDM()), Integer.toString(ri.getRI()), Integer.toString(ac.getAC()));
 
 		}
-		mem.printMemo();
+		Memoria.printMemo();
 	}
 }
